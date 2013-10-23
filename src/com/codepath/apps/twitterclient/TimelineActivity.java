@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.codepath.apps.twitterclient.models.Tweet;
@@ -39,4 +41,8 @@ public class TimelineActivity extends Activity {
 		return true;
 	}
 
+	public void composeTwitter(MenuItem item) {
+		Intent i = new Intent(this, ComposeActivity.class);
+		startActivity(i);
+	}
 }
